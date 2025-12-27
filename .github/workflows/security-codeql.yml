@@ -1,4 +1,4 @@
-name: "CodeQL Security Scan"
+name: "CodeQL Analysis"
 
 on:
   push:
@@ -6,21 +6,15 @@ on:
   pull_request:
     branches: [ main ]
   schedule:
-    - cron: '0 0 * * 0' 
+    - cron: '0 0 * * 0'
 
 jobs:
-  codeql:
-    name: Analyze
+  analyze:
+    name: Analyze code
     runs-on: ubuntu-latest
-    permissions:
-      actions: read
-      contents: read
-      security-events: write
     strategy:
-      fail-fast: false
       matrix:
-        language: [ "javascript", "typescript", "java" ]
-
+        language: [ 'javascript', 'typescript', 'java' ]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -29,11 +23,14 @@ jobs:
         uses: github/codeql-action/init@v2
         with:
           languages: ${{ matrix.language }}
-          
-      - name: Autobuild
-        uses: github/codeql-action/autobuild@v2
 
-      - name: Run CodeQL Analysis
+      - name: Build Java manually via Maven
+        if: matrix.language == 'java'
+        run: mvn compile
+
+      - name: Build JS/TS for CodeQL
+        if: matrix.language == 'javascript' || matrix.language == 'typescript'
+        run: npm install
+
+      - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v2
-        with:
-          category: "/language:${{ matrix.language }}"
