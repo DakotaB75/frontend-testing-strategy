@@ -1,21 +1,32 @@
 {
-  "name": "frontend-testing-strategy",
+  "name": "@dakotab75/frontend-testing-strategy",
   "version": "1.0.0",
-  "description": "This repository defines a **production-ready frontend testing strategy** inspired by real-world practices\r used in large-scale platforms (e-commerce, fintech, marketplaces).",
+  "description": "Enterprise-grade frontend testing strategy with E2E, contract testing, and CI/CD quality gates, inspired by large-scale product platforms.",
   "main": "index.js",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"No runtime tests; this repository defines testing strategy and CI quality gates.\" && exit 0",
+    "ci": "npx playwright test && npx cypress run"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/DakotaB75/frontend-testing-strategy.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "testing",
+    "frontend",
+    "e2e",
+    "playwright",
+    "cypress",
+    "ci-cd",
+    "quality",
+    "enterprise",
+    "testing-strategy"
+  ],
+  "author": "Dakota Thais Bazan Villafañe",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/DakotaB75/frontend-testing-strategy/issues"
   },
@@ -23,6 +34,8 @@
   "devDependencies": {
     "@playwright/test": "^1.57.0",
     "@types/node": "^25.0.3",
+    "@types/jest": "^29.7.0",
     "cypress": "^15.8.1"
-  }
+  },
+  "private": true
 }
