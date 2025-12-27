@@ -73,14 +73,6 @@ Any resemblance to production systems is architectural only.
 
 ---
 
-## Legal Disclaimer
-
-This software is provided "as is", without warranty of any kind.
-Use of this repository does not imply affiliation with Mercado Libre,
-GitHub, or Microsoft.
-
----
-
 ## Ownership
 
 Security ownership follows the **engineering ownership model**:

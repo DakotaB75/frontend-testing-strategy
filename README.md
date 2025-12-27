@@ -31,9 +31,9 @@ It represents **internal engineering standards**, decision-making criteria and t
 
 ## Architecture Overview
 
-![Testing Architecture](diagrams/ci-cd-architecture.png)
-
 **High-level flow:**
+
+![Testing Architecture](diagrams/ci-cd-architecture.png)
 
 This mirrors real internal CI quality flows used in large-scale product platforms.
 
