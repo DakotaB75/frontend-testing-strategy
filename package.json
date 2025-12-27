@@ -1,0 +1,28 @@
+{
+  "name": "frontend-testing-strategy",
+  "version": "1.0.0",
+  "description": "This repository defines a **production-ready frontend testing strategy** inspired by real-world practices\r used in large-scale platforms (e-commerce, fintech, marketplaces).",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DakotaB75/frontend-testing-strategy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DakotaB75/frontend-testing-strategy/issues"
+  },
+  "homepage": "https://github.com/DakotaB75/frontend-testing-strategy#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.57.0",
+    "@types/node": "^25.0.3",
+    "cypress": "^15.8.1"
+  }
+}
