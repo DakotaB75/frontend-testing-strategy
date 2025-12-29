@@ -11,7 +11,7 @@
 
 ## Context
 
-This repository defines an **enterprise-grade frontend testing strategy**, aligned with how **large-scale product teams** (Mercado Libre–style organizations) approach **quality, reliability and delivery confidence**.
+This repository defines an **enterprise-grade frontend testing strategy**, aligned with how **large-scale product teams** (Mercado Libre–style organizations) approach **quality, reliability and delivery confidence**. 
 
 This is **not a demo project**.
 
@@ -35,7 +35,7 @@ It represents **internal engineering standards**, decision-making criteria and t
 
 ![Testing Architecture](diagrams/ci-cd-architecture.png)
 
-This mirrors real internal CI quality flows used in large-scale product platforms.
+This mirrors real internal CI quality flows used in large-scale product platforms..
 
 ---
 
