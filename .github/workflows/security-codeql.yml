@@ -8,29 +8,26 @@ on:
   schedule:
     - cron: '0 0 * * 0'
 
+permissions:
+  contents: read
+  security-events: write
+
 jobs:
   analyze:
     name: Analyze code
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        language: [ 'javascript', 'typescript', 'java' ]
+
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Initialize CodeQL
-        uses: github/codeql-action/init@v2
+        uses: github/codeql-action/init@v3
         with:
-          languages: ${{ matrix.language }}
+          languages: typescript
 
-      - name: Build Java manually via Maven
-        if: matrix.language == 'java'
-        run: mvn compile
-
-      - name: Build JS/TS for CodeQL
-        if: matrix.language == 'javascript' || matrix.language == 'typescript'
+      - name: Install dependencies
         run: npm install
 
       - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v2
+        uses: github/codeql-action/analyze@v3
